@@ -25,7 +25,13 @@ export function CardList({ cards }: CardsProps): JSX.Element {
   return (
     <>
       {/* TODO CARD GRID */}
-
+      <SimpleGrid spacing="40px" columns={3} >
+        {cards.map((card: Card) => {
+          return (
+            <Card key={card.id} data={card} viewImage={() => { }} />
+          )
+        })}
+      </SimpleGrid>
       {/* TODO MODALVIEWIMAGE */}
     </>
   );
